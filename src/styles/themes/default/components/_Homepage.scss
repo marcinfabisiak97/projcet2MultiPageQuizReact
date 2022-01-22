@@ -1,0 +1,70 @@
+.mainPage {
+  background-image: url("../../../../assets/quiz_aplikacja_motoryzacjatlo.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  color: white;
+  text-align: center;
+
+  h1 {
+    font-size: 90px;
+    text-align: center;
+    margin-top: 0;
+    padding-top: 5%;
+  }
+  h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 10%;
+    background-image: linear-gradient(
+      to right,
+      rgba(3, 0, 92, 0.1) 0%,
+      rgba(3, 0, 92, 0.7) 25%,
+      rgba(3, 0, 92, 1) 50%,
+      rgba(3, 0, 92, 0.7) 75%,
+      rgba(3, 0, 92, 0.1) 100%
+    );
+  }
+}
+.fiveBricks {
+  display: flex;
+  justify-content: center;
+  margin: 5%;
+  &__brick {
+    min-width: 15%;
+    margin: 2%;
+    padding: 1% 1% 0 1%;
+
+    border: 2px solid rgb(212, 208, 212);
+    border-radius: 15px;
+    background-image: linear-gradient(
+      to top right,
+      rgba(36, 20, 70, 1),
+      rgba(235, 121, 235, 1)
+    );
+    background-size: 200%;
+    background-position: left;
+    transition: background-position 0.5s ease-in-out;
+    a {
+      text-decoration: none;
+    }
+    .brickImg {
+      border-bottom: 2px solid purple;
+      margin: 10%;
+      padding-bottom: 10%;
+      img {
+        max-width: 50%;
+      }
+    }
+    .brickText {
+      p {
+        color: white;
+      }
+    }
+  }
+  &__brick:hover {
+    background-position: right;
+  }
+}
