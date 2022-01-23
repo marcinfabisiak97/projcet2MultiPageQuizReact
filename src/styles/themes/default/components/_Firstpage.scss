@@ -1,0 +1,56 @@
+.techfirstPage {
+  background-image: url("../../../../assets/quiz_aplikacja_technologiatlo.jpg");
+  @include backGround;
+}
+.chooseCat {
+  margin: 1%;
+  &__chooseText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 500px;
+    min-height: 70px;
+    @include techBackgroundColor;
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 4%;
+    border: 1px solid white;
+    border-radius: 15px;
+    color: white;
+    @include techBackgroundColorSecond;
+    @include colorChanger;
+    img {
+      max-width: 30%;
+    }
+    p {
+      text-decoration: none;
+    }
+  }
+  &__btn:hover {
+    @include colorChangerHover;
+  }
+}
+.imgnText {
+  &__img {
+    margin-top: 10%;
+    img {
+      max-width: 20%;
+      padding-bottom: 5%;
+    }
+  }
+  &__line {
+    border-bottom: 2px solid purple;
+    max-width: 30%;
+    margin: 0 auto;
+  }
+  &__text {
+    margin-top: 1%;
+  }
+}

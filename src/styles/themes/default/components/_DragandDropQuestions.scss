@@ -1,0 +1,59 @@
+.dndwrapper {
+  background-image: url("../../../../assets/quiz_aplikacja_technologiatlo.jpg");
+  @include backGround;
+}
+.textAndScore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0;
+  &__text {
+    font-size: 20px;
+    min-width: 700px;
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    @include techBackgroundColor;
+    p {
+      text-align: center;
+      color: white;
+    }
+  }
+  &__score {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    border: 2px solid white;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    @include techBackgroundColorSecond;
+    margin: 0;
+    padding: 0;
+    p {
+      color: white;
+    }
+  }
+}
+.dnd {
+  &__question {
+    display: flex;
+  }
+  &__btn {
+    button {
+      color: white;
+      padding: 20px 60px;
+      margin: 5%;
+      border-radius: 15px;
+      @include techBackgroundColorSecond;
+      @include colorChanger;
+    }
+    button:hover {
+      @include colorChangerHover;
+    }
+  }
+}

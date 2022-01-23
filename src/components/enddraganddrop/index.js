@@ -10,22 +10,15 @@ import historia_ikona from "../../assets/historia_ikona.svg"
 import cofnij_x from "../../assets/cofnij_x.svg";
 import zamknij_x from "../../assets/zamknij_x.svg";
 import q from "../../assets/q.png";
-const EndScreenDragandDropComponent = () => {
+
+const EndScreen = () => {
     const breakpoint = 1023;
     const width = window.innerWidth;
-
-
     const { score, setScore } = useContext(QuizContext);
-    const { photo1, desc1, endClas, dataCode2, linkQuest, endCategory, linkCode, endCategoryPage,
-        endCategoryPageBrick, endCategoryPageBrickTop, endCategoryPageBrickTopbottom,
-        endCategoryPage_theScore, endCategoryPage_theScoreWynik, endCategoryPage_theScoreNumber,
-        endCategoryPage_button, endFiveCateqories, fiveCategoriesQuiz, fiveCategoriesQuizBrick,
-        fiveCategoriesQuizBrickTop, fiveCategoriesQuizBrickDown, linker3, linkAdr } = useContext(QuestionsContext);
-
+    const { photo1, desc1, endClas, dataCode2, linkQuest, endCategory, linkCode, linker3, linkAdr } = useContext(QuestionsContext);
     const restartQuiz = () => {
         setScore(0)
         localStorage.clear()
-
     }
     const myLists = [
 
@@ -36,36 +29,22 @@ const EndScreenDragandDropComponent = () => {
         { text: 'HISTORIA', content: '/Firstpagehist', pic: historia_ikona },
     ];
 
-
-    const Categories = (props) => {
-
+    const categoryShortcut = myLists.filter(el => el.text.slice() !== endCategory).map((el, index) => {
         return (
-
-            <Link to={props.content}  >
+            <Link to={el.content}  >
                 <div  >
-                    <img src={props.pic} alt="category" />
+                    <img src={el.pic} alt="category" />
                 </div>
                 <div >
-                    <p>{props.text}</p>
+                    <p>{el.text}</p>
                 </div>
             </Link>
         )
-    }
-
-
-    const categoryShortcut = myLists.filter(el => el.text.slice() !== endCategory).map((el, index) => {
-
-        return (<Categories
-            key={index}
-            text={el.text}
-            content={el.content}
-            pic={el.pic}
-        />)
     })
 
     return (
-        <div className={endClas}>
-            <div id="leftImg">
+        <div className="endScreen">
+            <div >
                 <img src={q} alt="Q" />
             </div>
             <div >
@@ -125,4 +104,4 @@ const EndScreenDragandDropComponent = () => {
         </div>
     )
 }
-export default EndScreenDragandDropComponent;
+export default EndScreen;

@@ -1,0 +1,38 @@
+@mixin techBackgroundColor {
+  background-image: linear-gradient(
+    to right,
+    rgba(135, 37, 136, 0.1) 0%,
+    rgba(135, 37, 136, 0.7) 25%,
+    rgba(135, 37, 136, 1) 50%,
+    rgba(135, 37, 136, 0.7) 75%,
+    rgba(135, 37, 136, 0.1) 100%
+  );
+}
+@mixin techBackgroundColorSecond {
+  background-image: linear-gradient(
+    to right,
+    rgba(36, 20, 70, 1),
+    rgba(137, 37, 137, 1)
+  );
+}
+@mixin colorChanger {
+  background-size: 200%;
+  background-position: left;
+  transition: background-position 0.5s ease-in-out;
+}
+@mixin colorChangerHover {
+  background-position: right;
+  cursor: pointer;
+}
+@mixin backGround {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}

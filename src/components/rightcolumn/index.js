@@ -4,54 +4,52 @@ import { Draggable, Droppable } from "react-beautiful-dnd";
 const RightColumn = ({ columnId, column, score, setScore, colorAlert }) => {
 
   return (
-    <div>
-      <div >
-        <h2>{column.name}</h2>
-        <Droppable droppableId={columnId} >
-          {(provided, snapshot) => {
-            return (
-              <div
-                {...provided.droppableProps}
-                ref={provided.innerRef}
+    <div className="rightColumn">
+      <h2>{column.name}</h2>
+      <Droppable droppableId={columnId} >
+        {(provided, snapshot) => {
+          return (
+            <div
+              {...provided.droppableProps}
+              ref={provided.innerRef}
+              className="rightColumn__dropable"
+            >
+              {column.items.map((item, index) => {
+                return (
 
-              >
-                {column.items.map((item, index) => {
-                  return (
+                  <Draggable
+                    key={item.id}
+                    draggableId={item.id}
+                    index={index}
+                  >
+                    {(provided, snapshot) => {
 
-                    <Draggable
-                      key={item.id}
-                      draggableId={item.id}
-                      index={index}
-                    >
-                      {(provided, snapshot) => {
+                      return (
+                        <div
+                          ref={provided.innerRef}
+                          {...provided.draggableProps}
+                          {...provided.dragHandleProps}
+                          className="rightColumn__dragable"
+                          style={{
 
-                        return (
-                          <div
-                            ref={provided.innerRef}
-                            {...provided.draggableProps}
-                            {...provided.dragHandleProps}
+                            ...provided.draggableProps.style,
 
-                            style={{
+                          }}
+                        >
+                          {item.content}
 
-                              ...provided.draggableProps.style,
+                        </div>
+                      );
+                    }}
+                  </Draggable>
 
-                            }}
-                          >
-                            {item.content}
-
-                          </div>
-                        );
-                      }}
-                    </Draggable>
-
-                  );
-                })}
-                {provided.placeholder}
-              </div>
-            );
-          }}
-        </Droppable>
-      </div>
+                );
+              })}
+              {provided.placeholder}
+            </div>
+          );
+        }}
+      </Droppable>
     </div>
   );
 };

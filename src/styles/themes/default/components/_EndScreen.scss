@@ -1,0 +1,20 @@
+.endScreen {
+  background-image: url("../../../../assets/quiz_aplikacja_technologiatlo.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  #leftImg {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+  h2 {
+    font-size: 3rem;
+    padding-top: 0px;
+    margin-top: 0px;
+  }
+}

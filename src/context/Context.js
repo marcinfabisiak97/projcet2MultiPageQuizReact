@@ -35,7 +35,8 @@ export const FirstPage = createContext({
     category: "PROGRAMOWANIE",
     linkAdres: "/Standardquestionscode",
     linkAdres1: "/Codedraganddropcode",
-    linker2: button_strzałka_plus
+    linker2: button_strzałka_plus,
+    firstPageWrraper: 'techfirstPage',
 });
 
 export const CultPageProvider = ({ children }) => {
@@ -111,6 +112,7 @@ export const TechPageProvider = ({ children }) => {
     const linkAdres = "/Standardquestionstech";
     const linkAdres1 = "/Codedraganddroptech";
     const linker2 = button_strzałka_plus;
+    const firstPageWrraper = 'techfirstPage';
     return (
         <FirstPage.Provider
             value={{
@@ -119,7 +121,8 @@ export const TechPageProvider = ({ children }) => {
                 category,
                 linkAdres,
                 linkAdres1,
-                linker2
+                linker2,
+                firstPageWrraper,
             }}
         >
             {children}

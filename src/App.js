@@ -8,8 +8,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 const Homepage = React.lazy(() => import('./pages/homepage'));
 const Firstpage = React.lazy(() => import('./components/firstpage'));
 const Standardquestions = React.lazy(() => import('./components/standardquestions'));
-const CodequestionsdraganddropComponent = React.lazy(() => import('./components/draganddropquestions'));
-const EndScreenDragandDropComponent = React.lazy(() => import('./components/enddraganddrop'));
+const Draganddropquest = React.lazy(() => import('./components/draganddropquestions'));
+const EndScreen = React.lazy(() => import('./components/enddraganddrop'));
 
 function App() {
   const [gameState, setGameState] = useState("homepage");
@@ -45,28 +45,28 @@ function App() {
               <Route exact path='/Firstpagetech' component={Firstpage} />
             </TechPageProvider>
             <Route exact path='/Standardquestionscode' component={Standardquestions} />
-            <Route exact path='/Codedraganddropcode' component={CodequestionsdraganddropComponent} />
+            <Route exact path='/Codedraganddropcode' component={Draganddropquest} />
             <CultQuestionStandardProvider>
               <Route exact path='/Standardquestionscult' component={Standardquestions} />
-              <Route exact path='/Codedraganddropcult' component={CodequestionsdraganddropComponent} />
-              <Route exact path='/EndScreenDragandDropCult' component={EndScreenDragandDropComponent} />
+              <Route exact path='/Codedraganddropcult' component={Draganddropquest} />
+              <Route exact path='/EndScreenDragandDropCult' component={EndScreen} />
             </CultQuestionStandardProvider>
             <HistQuestionStandardProvider>
               <Route exact path='/Standardquestionshist' component={Standardquestions} />
-              <Route exact path='/Codedraganddrophist' component={CodequestionsdraganddropComponent} />
-              <Route exact path='/EndScreenDragandDropHist' component={EndScreenDragandDropComponent} />
+              <Route exact path='/Codedraganddrophist' component={Draganddropquest} />
+              <Route exact path='/EndScreenDragandDropHist' component={EndScreen} />
             </HistQuestionStandardProvider>
             <MotoQuestionStandardProvider>
               <Route exact path='/Standardquestionsmoto' component={Standardquestions} />
-              <Route exact path='/Codedraganddropmoto' component={CodequestionsdraganddropComponent} />
-              <Route exact path='/EndScreenDragandDropMoto' component={EndScreenDragandDropComponent} />
+              <Route exact path='/Codedraganddropmoto' component={Draganddropquest} />
+              <Route exact path='/EndScreenDragandDropMoto' component={EndScreen} />
             </MotoQuestionStandardProvider>
             <TechQuestionStandardProvider>
               <Route exact path='/Standardquestionstech' component={Standardquestions} />
-              <Route exact path='/Codedraganddroptech' component={CodequestionsdraganddropComponent} />
-              <Route exact path='/EndScreenDragandDropTech' component={EndScreenDragandDropComponent} />
+              <Route exact path='/Codedraganddroptech' component={Draganddropquest} />
+              <Route exact path='/EndScreenDragandDropTech' component={EndScreen} />
             </TechQuestionStandardProvider>
-            <Route exact path='/EndScreenDragandDropCode' component={EndScreenDragandDropComponent} />
+            <Route exact path='/EndScreenDragandDropCode' component={EndScreen} />
           </QuizContext.Provider >
         </Switch>
 

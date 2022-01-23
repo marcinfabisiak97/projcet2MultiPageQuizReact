@@ -3,32 +3,33 @@ import React from "react";
 import { FirstPage } from "../../context/Context";
 import { useContext } from "react";
 
-import Header1 from "../header1";
+import Headerfirstpage from "../headerFirstPage";
 const Firstpage = () => {
 
 	const width = window.innerWidth;
 	const breakpoint = 1023;
-	const { photo, desc, category, linkAdres, linkAdres1, clicker, categoryPage, categoryPageText, linker2 } = useContext(FirstPage);
+	const { photo, desc, category, linkAdres, linkAdres1, clicker, linker2, firstPageWrraper } = useContext(FirstPage);
 	return (
 
-		<div className={categoryPage}>
+		<div className={firstPageWrraper}>
 
-			<Header1 />
-			<div  >
-				<div >
+			<Headerfirstpage />
+			<div className='chooseCat'>
+				<div className='chooseCat__chooseText' >
 					<p>WYBRANA KATEGORIA:</p>
 				</div>
-				<div >
-					<div >
+				<div className='imgnText' >
+					<div className='imgnText__img' >
 						<img src={photo} alt={desc} />
 					</div>
-					<div >
+					<div className='imgnText__line'></div>
+					<div className='imgnText__text'>
 						<p>{category}</p>
 					</div>
 				</div>
 			</div>
-			<Link to={width < breakpoint ? linkAdres : linkAdres1} className={clicker} >
-				<div>
+			<Link to={width < breakpoint ? linkAdres : linkAdres1} className={clicker} className="chooseCat__link" >
+				<div className='chooseCat__btn'>
 					<p>Rozpocznij</p><img src={linker2} alt="button" />
 				</div>
 			</Link>

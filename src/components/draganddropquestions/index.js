@@ -4,29 +4,19 @@ import { QuestionsContext } from "../../context/Context";
 import { QuizContext } from "../../context/Context";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-import Header from "../header";
 import RightColumn from "../rightcolumn";
 import LeftColumn from "../leftcolumn";
-import q from "../../assets/q.png";
 import { useHistory } from 'react-router-dom';
 import { FirstPage } from "../../context/Context"
-const CodequestionsdraganddropComponent = () => {
+import Headerfirstpage from "../headerFirstPage";
+const Draganddropquest = () => {
   const {
     dataCode1,
     dataCode2,
-    wrapperDragnDropWhole,
-    wrapperDragnDropNext,
-    wrapperDragnDropRiganswer,
-    wrapperDragnDropFinishNext,
     linkCodeEndDragnDrop,
     colorAlert,
     dropableClassLeft,
     dropableClassRight,
-    dragableClassLeft,
-    dragableClassRight,
-    dndNumberQuestion,
-    dndNumberQuestionWynik,
-    dndNumberQuestionNumber
   } = useContext(QuestionsContext);
   const { linkAdres } = useContext(FirstPage);
   const width = window.innerWidth;
@@ -117,48 +107,37 @@ const CodequestionsdraganddropComponent = () => {
 
   return (
 
-    <div>
-      <Suspense fallback={<div>Wczytywanie...</div>}>
-        <div >
-          <img src={q} alt="letter Q" />
+    <div className="dndwrapper">
+      <Headerfirstpage />
+      <div className="textAndScore">
+        <p className="textAndScore__text">DRAG & DROP THE RIGHT ANSWER</p>
+        <p className="textAndScore__score">{dataCode1[count].number} / {Object.keys(dataCode2).length}</p>
+      </div>
+      <div className="dnd" >
+        <div className="dnd__question">
+          <DragDropContext
+            onDragEnd={(result) => onDragEnd(result, columns, setColumns)}
+          >
+            {Object.entries(columns).map(([columnId, column], index) => {
+              return column.name === "right answer" ? (
+                <RightColumn key={columnId} {...{ columnId, column, score, setScore, colorAlert }} />
+              ) : (
+                <LeftColumn key={columnId} {...{ columnId, column, score, setScore, colorAlert }} />
+              );;
+            })}
+          </DragDropContext>
         </div>
-        <div >
-          <Header />
+        <div className="dnd__btn">
+          {count === Object.keys(dataCode2).length - 1 ? (
+            <Link to={linkCodeEndDragnDrop}>
+              <button >Finish</button>
+            </Link>
+          ) : (
+            <button onClick={() => { nextQuestion(); }}>Check</button>
+          )}
         </div>
-        <div >
-          <div >
-            <p>DRAG & DROP THE RIGHT ANSWER</p>
-          </div>
-          <div  >
-            <p> {dataCode1[count].number} / {Object.keys(dataCode2).length}</p>
-          </div>
-        </div>
-        <div >
-          <div >
-            <DragDropContext
-              onDragEnd={(result) => onDragEnd(result, columns, setColumns)}
-            >
-              {Object.entries(columns).map(([columnId, column], index) => {
-                return column.name === "right answer" ? (
-                  <RightColumn key={columnId} {...{ columnId, column, score, setScore, colorAlert, dropableClassRight }} />
-                ) : (
-                  <LeftColumn key={columnId} {...{ columnId, column, score, setScore, colorAlert, dropableClassLeft }} />
-                );
-              })}
-            </DragDropContext>
-          </div>
-          <div  >
-            {count === Object.keys(dataCode2).length - 1 ? (
-              <Link to={linkCodeEndDragnDrop}>
-                <button >Finish</button>
-              </Link>
-            ) : (
-              <button onClick={() => { nextQuestion(); }}>Check</button>
-            )}
-          </div>
-        </div>
-      </Suspense>
+      </div>
     </div>
   );
 };
-export default CodequestionsdraganddropComponent;
+export default Draganddropquest;
