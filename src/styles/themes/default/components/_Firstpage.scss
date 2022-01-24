@@ -1,7 +1,7 @@
-.techfirstPage {
-  background-image: url("../../../../assets/quiz_aplikacja_technologiatlo.jpg");
+.firstPage {
   @include backGround;
 }
+
 .chooseCat {
   margin: 1%;
   &__chooseText {
@@ -10,21 +10,12 @@
     align-items: center;
     min-width: 500px;
     min-height: 70px;
-    @include techBackgroundColor;
   }
-
-  &__link {
-    text-decoration: none;
-  }
+}
+.link {
+  text-decoration: none;
   &__btn {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 4%;
-    border: 1px solid white;
-    border-radius: 15px;
-    color: white;
-    @include techBackgroundColorSecond;
+    @include button;
     @include colorChanger;
     img {
       max-width: 30%;
@@ -35,6 +26,51 @@
   }
   &__btn:hover {
     @include colorChangerHover;
+  }
+}
+.techLink {
+  &__btn {
+    @include techBackgroundColorSecond;
+  }
+}
+.cultLink {
+  &__btn {
+    @include cultBackgroundColorSecond;
+  }
+}
+.motoLink {
+  &__btn {
+    @include motoBackgroundColorSecond;
+  }
+}
+.histLink {
+  &__btn {
+    @include histBackgroundColorSecond;
+  }
+}
+.techChooseCat {
+  &__chooseText {
+    @include techBackgroundColor;
+  }
+}
+.cultChooseCat {
+  &__chooseText {
+    @include cultBackgroundColor;
+  }
+}
+.motoChooseCat {
+  &__chooseText {
+    @include motoBackgroundColor;
+  }
+}
+.codeChooseCat {
+  &__chooseText {
+    @include codeBackgroundColor;
+  }
+}
+.histChooseCat {
+  &__chooseText {
+    @include histBackgroundColor;
   }
 }
 .imgnText {

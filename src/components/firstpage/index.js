@@ -8,14 +8,14 @@ const Firstpage = () => {
 
 	const width = window.innerWidth;
 	const breakpoint = 1023;
-	const { photo, desc, category, linkAdres, linkAdres1, clicker, linker2, firstPageWrraper } = useContext(FirstPage);
+	const { photo, desc, category, linkAdres, linkAdres1, clicker, linker2, firstPageWrraper, chooseCategory, linkButton } = useContext(FirstPage);
 	return (
 
 		<div className={firstPageWrraper}>
 
 			<Headerfirstpage />
 			<div className='chooseCat'>
-				<div className='chooseCat__chooseText' >
+				<div className={chooseCategory} >
 					<p>WYBRANA KATEGORIA:</p>
 				</div>
 				<div className='imgnText' >
@@ -28,8 +28,8 @@ const Firstpage = () => {
 					</div>
 				</div>
 			</div>
-			<Link to={width < breakpoint ? linkAdres : linkAdres1} className={clicker} className="chooseCat__link" >
-				<div className='chooseCat__btn'>
+			<Link to={width < breakpoint ? linkAdres : linkAdres1} className={clicker} className="link" >
+				<div className={linkButton}>
 					<p>Rozpocznij</p><img src={linker2} alt="button" />
 				</div>
 			</Link>

@@ -31,45 +31,37 @@ const EndScreen = () => {
 
     const categoryShortcut = myLists.filter(el => el.text.slice() !== endCategory).map((el, index) => {
         return (
-            <Link to={el.content}  >
-                <div  >
-                    <img src={el.pic} alt="category" />
-                </div>
-                <div >
-                    <p>{el.text}</p>
-                </div>
-            </Link>
+            <div className="brick">
+                <Link to={el.content}  >
+                    <div className="brick__image">
+                        <img src={el.pic} alt="category" />
+                    </div>
+                    <div className="brick__text">
+                        <p>{el.text}</p>
+                    </div>
+                </Link>
+            </div>
         )
     })
 
     return (
         <div className="endScreen">
-            <div >
+            <div className="endScreen__letter" >
                 <img src={q} alt="Q" />
             </div>
-            <div >
-                <div >
-                    <h2>QUIZ</h2>
+            <div className="middleColumn">
+                <h2>QUIZ</h2>
+                <div className="middleColumn__image">
+                    <img src={photo1} alt={desc1} />
                 </div>
-                <div >
-
-                    <div >
-                        <img src={photo1} alt={desc1} />
-                    </div>
-                    <div >
-                        <p>{endCategory}</p>
-                    </div>
+                <div className="middleColumn__line"></div>
+                <p>{endCategory}</p>
+                <div className="middleColumn__score
+                ">
+                    <p>TWÓJ WYNIK</p>
+                    <p> {score} / {Object.keys(dataCode2).length}</p>
                 </div>
-                <div >
-                    <div >
-                        <p>TWÓJ WYNIK</p>
-                    </div>
-                    <div  >
-                        <p> {score} / {Object.keys(dataCode2).length}</p>
-                    </div>
-                </div>
-                <div >
-
+                <div className="middleColumn__btnRestart">
                     <Link to={width < breakpoint ? linkAdr : linkQuest} >
                         <div onClick={restartQuiz}>
                             <p>POWTÓRZ QUIZ</p>
@@ -79,25 +71,21 @@ const EndScreen = () => {
 
                 </div>
             </div>
-
-
-            <div >
-                <div className="wrapper__BackandEx">
-                    <div>
+            <div className="lastColumn" >
+                <div className="lastColumn__backAndEx">
+                    <div className="lastColumn__back">
                         <Link to={linkCode}>
                             <img src={cofnij_x} alt="cofnij" />
                         </Link>
                     </div>
-                    <div>
+                    <div className="lastColumn__ex">
                         <Link to="/">
                             <img src={zamknij_x} alt="zamknij" />
                         </Link>
                     </div>
-                </div>
-                <div>
-                    <p>WYBIERZ KATEGORIE</p>
-                </div>
-                <div  >
+                </div >
+                <p className="lastColumn__chooseCat">WYBIERZ KATEGORIE</p>
+                <div className="lastColumn__brikcs">
                     {categoryShortcut}
                 </div>
             </div>

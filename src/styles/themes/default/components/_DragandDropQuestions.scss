@@ -1,8 +1,7 @@
 .dndwrapper {
-  background-image: url("../../../../assets/quiz_aplikacja_technologiatlo.jpg");
   @include backGround;
 }
-.textAndScore {
+.textAndNumber {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,22 +15,13 @@
     align-items: center;
     margin: 0;
     padding: 0;
-    @include techBackgroundColor;
     p {
       text-align: center;
       color: white;
     }
   }
-  &__score {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100px;
-    height: 100px;
-    border: 2px solid white;
-    border-radius: 50%;
-    font-size: 1.2rem;
-    @include techBackgroundColorSecond;
+  &__number {
+    @include numberQuest;
     margin: 0;
     padding: 0;
     p {

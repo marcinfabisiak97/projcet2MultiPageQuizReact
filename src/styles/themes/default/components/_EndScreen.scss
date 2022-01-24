@@ -7,14 +7,131 @@
   color: white;
   display: flex;
   justify-content: space-around;
-  #leftImg {
-    position: absolute;
-    top: 20px;
-    left: 20px;
+  &__letter {
+    padding-top: 2%;
   }
   h2 {
     font-size: 3rem;
+    margin-top: 10%;
+  }
+}
+.middleColumn {
+  text-align: center;
+  width: 55vw;
+  &__image {
+    img {
+      max-width: 15%;
+    }
+  }
+  &__line {
+    margin: 5% auto;
+    max-width: 200px;
+    border-bottom: 2px solid purple;
+  }
+  &__score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+
+    p:first-child {
+      font-size: 1rem;
+      width: 35%;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 3%;
+      @include techBackgroundColor;
+    }
+    p:last-child {
+      @include numberQuest;
+      @include techBackgroundColorSecond;
+      margin: 0 40% 0 0;
+      padding: 0;
+    }
+  }
+  &__btnRestart {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    a {
+      text-decoration: none;
+    }
+
+    div {
+      @include button;
+      @include techBackgroundColorSecond;
+      @include colorChanger;
+      img {
+        width: 30%;
+      }
+      p {
+      }
+    }
+    div:hover {
+      @include colorChangerHover;
+    }
+  }
+}
+.lastColumn {
+  margin-top: 5%;
+  &__backAndEx {
+    display: flex;
+    justify-content: center;
+    img {
+      width: 50%;
+    }
+  }
+  &__chooseCat {
+    font-size: 0.7rem;
+  }
+  &__brikcs {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+}
+.brick {
+  justify-content: flex-start;
+  width: 70px;
+  height: 70px;
+  padding: 30px;
+  margin: 10px;
+  border-radius: 30px;
+  @include techBackgroundColorSecond;
+  box-shadow: 2px 2px 5px #8f6cd1;
+  @include colorChanger;
+  &__image {
+    width: 80px;
+    height: 60px;
+    padding-top: 0px;
+    margin-bottom: 0px;
+    border-bottom: 2px solid rgba(204, 0, 126, 1);
+
+    img {
+      display: block;
+      width: 50%;
+      align-self: flex-start;
+      padding-bottom: 20px;
+    }
+  }
+  &__text {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 10px;
+    color: white;
     padding-top: 0px;
     margin-top: 0px;
+
+    p {
+      text-decoration: none;
+      padding-top: 0px;
+      margin-top: 5px;
+    }
   }
+}
+.brick:hover {
+  @include colorChangerHover;
 }

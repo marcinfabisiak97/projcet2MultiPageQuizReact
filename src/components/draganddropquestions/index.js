@@ -17,6 +17,9 @@ const Draganddropquest = () => {
     colorAlert,
     dropableClassLeft,
     dropableClassRight,
+    dndwrapper,
+    textAndNumberText,
+    textAndNumberNumber
   } = useContext(QuestionsContext);
   const { linkAdres } = useContext(FirstPage);
   const width = window.innerWidth;
@@ -107,11 +110,11 @@ const Draganddropquest = () => {
 
   return (
 
-    <div className="dndwrapper">
+    <div className={dndwrapper}>
       <Headerfirstpage />
-      <div className="textAndScore">
-        <p className="textAndScore__text">DRAG & DROP THE RIGHT ANSWER</p>
-        <p className="textAndScore__score">{dataCode1[count].number} / {Object.keys(dataCode2).length}</p>
+      <div className="textAndNumber">
+        <p className={textAndNumberText}>DRAG & DROP THE RIGHT ANSWER</p>
+        <p className={textAndNumberNumber}>{dataCode1[count].number} / {Object.keys(dataCode2).length}</p>
       </div>
       <div className="dnd" >
         <div className="dnd__question">

@@ -8,11 +8,68 @@
     rgba(135, 37, 136, 0.1) 100%
   );
 }
+@mixin cultBackgroundColor {
+  background-image: linear-gradient(
+    to right,
+    rgba(125, 125, 125, 0.1) 0%,
+    rgba(125, 125, 125, 0.7) 25%,
+    rgba(125, 125, 125, 1) 50%,
+    rgba(125, 125, 125, 0.7) 75%,
+    rgba(125, 125, 125, 0.1) 100%
+  );
+}
+@mixin motoBackgroundColor {
+  background-image: linear-gradient(
+    to right,
+    rgba(24, 19, 92, 0.1) 0%,
+    rgba(24, 19, 92, 0.7) 25%,
+    rgba(24, 19, 92, 1) 50%,
+    rgba(24, 19, 92, 0.7) 75%,
+    rgba(24, 19, 92, 0.1) 100%
+  );
+}
+@mixin codeBackgroundColor {
+  background-image: linear-gradient(
+    to right,
+    rgba(74, 32, 96, 0.1) 0%,
+    rgba(74, 32, 96, 0.7) 25%,
+    rgba(74, 32, 96, 1) 50%,
+    rgba(74, 32, 96, 0.7) 75%,
+    rgba(74, 32, 96, 0.1) 100%
+  );
+}
+@mixin histBackgroundColor {
+  background-image: linear-gradient(
+    to right,
+    rgba(165, 148, 127, 0.1) 0%,
+    rgba(165, 148, 127, 0.7) 25%,
+    rgba(165, 148, 127, 1) 50%,
+    rgba(165, 148, 127, 0.7) 75%,
+    rgba(165, 148, 127, 0.1) 100%
+  );
+}
 @mixin techBackgroundColorSecond {
   background-image: linear-gradient(
     to right,
     rgba(36, 20, 70, 1),
     rgba(137, 37, 137, 1)
+  );
+}
+@mixin cultBackgroundColorSecond {
+  background-image: linear-gradient(to right, rgba(140, 140, 140, 1), white);
+}
+@mixin motoBackgroundColorSecond {
+  background-image: linear-gradient(
+    to top right,
+    rgba(12, 16, 58, 1),
+    rgba(19, 70, 216, 1)
+  );
+}
+@mixin histBackgroundColorSecond {
+  background-image: linear-gradient(
+    to top right,
+    rgba(21, 18, 16, 1),
+    rgba(180, 160, 140, 1)
   );
 }
 @mixin colorChanger {
@@ -35,4 +92,24 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+@mixin button {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  padding: 4%;
+  border: 1px solid white;
+  border-radius: 15px;
+  color: white;
+}
+@mixin numberQuest {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  border: 2px solid white;
+  border-radius: 50%;
+  font-size: 1.2rem;
 }

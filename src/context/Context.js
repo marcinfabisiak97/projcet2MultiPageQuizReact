@@ -6,10 +6,10 @@ import kultura_ikona from "../assets/kultura_ikona.svg"
 import motoryzacja_ikona from "../assets/motoryzacja_ikona.svg"
 import programowanie_ikona from "../assets/programowanie_ikona.svg"
 import historia_ikona from "../assets/historia_ikona.svg"
-import button_strzałka_plus from "../assets/button_strzałka_plus.svg"
-import buttoncult_cliker_ikon from "../assets/buttoncult_cliker_ikon.png"
-import buttonmoto_cliker_ikon from "../assets/buttonmoto_cliker_ikon.png"
-import buttonhist_cliker_ikon from "../assets/buttonhist_cliker_ikon.png"
+import button_strzałka_plus from "../assets/button strzałka/technologia strzałka.png"
+import buttoncult_cliker_ikon from "../assets/button strzałka/kultura strzałka.png"
+import buttonmoto_cliker_ikon from "../assets/button strzałka/moto strzałka.png"
+import buttonhist_cliker_ikon from "../assets/button strzałka/hist strzałka.png"
 import poprawna_odpowiedź from "../assets/poprawna_odpowiedź_.svg"
 import { CodeQuestions } from '../context/QuestionsReactBank'
 import { CultQuestions } from '../context/QuestionCultBank'
@@ -36,7 +36,9 @@ export const FirstPage = createContext({
     linkAdres: "/Standardquestionscode",
     linkAdres1: "/Codedraganddropcode",
     linker2: button_strzałka_plus,
-    firstPageWrraper: 'techfirstPage',
+    firstPageWrraper: 'firstPage codeBackGround',
+    chooseCategory: 'chooseCat__chooseText codeChooseCat__chooseText',
+    linkButton: 'link__btn techLink__btn',
 });
 
 export const CultPageProvider = ({ children }) => {
@@ -46,6 +48,9 @@ export const CultPageProvider = ({ children }) => {
     const linkAdres = "/Standardquestionscult";
     const linkAdres1 = "/Codedraganddropcult";
     const linker2 = buttoncult_cliker_ikon;
+    const firstPageWrraper = 'firstPage cultBackGround';
+    const chooseCategory = 'chooseCat__chooseText cultChooseCat__chooseText';
+    const linkButton = 'link__btn cultLink__btn';
     return (
         <FirstPage.Provider
             value={{
@@ -54,7 +59,10 @@ export const CultPageProvider = ({ children }) => {
                 category,
                 linkAdres,
                 linkAdres1,
-                linker2
+                linker2,
+                firstPageWrraper,
+                chooseCategory,
+                linkButton
             }}
         >
             {children}
@@ -68,6 +76,9 @@ export const HistPageProvider = ({ children }) => {
     const linkAdres = "/Standardquestionshist";
     const linkAdres1 = "/Codedraganddrophist";
     const linker2 = buttonhist_cliker_ikon;
+    const firstPageWrraper = 'firstPage histBackGround';
+    const chooseCategory = 'chooseCat__chooseText histChooseCat__chooseText';
+    const linkButton = 'link__btn histLink__btn';
     return (
         <FirstPage.Provider
             value={{
@@ -76,7 +87,10 @@ export const HistPageProvider = ({ children }) => {
                 category,
                 linkAdres,
                 linkAdres1,
-                linker2
+                linker2,
+                firstPageWrraper,
+                chooseCategory,
+                linkButton
             }}
         >
             {children}
@@ -89,7 +103,10 @@ export const MotoPageProvider = ({ children }) => {
     const category = "MOTORYZACJA";
     const linkAdres = "/Standardquestionsmoto";
     const linkAdres1 = "/Codedraganddropmoto";
-    const linker2 = button_strzałka_plus;
+    const linker2 = buttonmoto_cliker_ikon;
+    const firstPageWrraper = 'firstPage motoBackGround';
+    const chooseCategory = 'chooseCat__chooseText motoChooseCat__chooseText';
+    const linkButton = 'link__btn motoLink__btn';
     return (
         <FirstPage.Provider
             value={{
@@ -98,7 +115,10 @@ export const MotoPageProvider = ({ children }) => {
                 category,
                 linkAdres,
                 linkAdres1,
-                linker2
+                linker2,
+                firstPageWrraper,
+                chooseCategory,
+                linkButton
             }}
         >
             {children}
@@ -112,7 +132,9 @@ export const TechPageProvider = ({ children }) => {
     const linkAdres = "/Standardquestionstech";
     const linkAdres1 = "/Codedraganddroptech";
     const linker2 = button_strzałka_plus;
-    const firstPageWrraper = 'techfirstPage';
+    const firstPageWrraper = 'firstPage techBackGround';
+    const chooseCategory = 'chooseCat__chooseText techChooseCat__chooseText';
+    const linkButton = 'link__btn techLink__btn';
     return (
         <FirstPage.Provider
             value={{
@@ -123,6 +145,8 @@ export const TechPageProvider = ({ children }) => {
                 linkAdres1,
                 linker2,
                 firstPageWrraper,
+                chooseCategory,
+                linkButton
             }}
         >
             {children}
@@ -142,7 +166,10 @@ export const QuestionsContext = createContext({
     linkQuest: '/Codedraganddropcode',
     colorAlert: 'rgba(0,0,123)',
     endCategory: "PROGRAMOWANIE",
-    linker3: button_strzałka_plus
+    linker3: button_strzałka_plus,
+    dndwrapper: 'dndwrapper codeBackGround',
+    textAndNumberText: 'textAndNumber__text codeChooseCat__chooseText',
+    textAndNumberNumber: 'textAndNumber__number techLink__btn',
 });
 export const CultQuestionStandardProvider = ({ children }) => {
     const photo1 = kultura_ikona;
@@ -158,6 +185,9 @@ export const CultQuestionStandardProvider = ({ children }) => {
     const colorAlert = 'rgba(104, 92, 136, 1)';
     const endCategory = "KULTURA";
     const linker3 = buttoncult_cliker_ikon;
+    const dndwrapper = 'dndwrapper cultBackGround';
+    const textAndNumberText = 'textAndNumber__text cultChooseCat__chooseText';
+    const textAndNumberNumber = 'textAndNumber__number cultLink__btn';
     return (
         <QuestionsContext.Provider
             value={{
@@ -173,8 +203,10 @@ export const CultQuestionStandardProvider = ({ children }) => {
                 linkQuest,
                 colorAlert,
                 endCategory,
-                linker3
-
+                linker3,
+                dndwrapper,
+                textAndNumberText,
+                textAndNumberNumber
             }}
         >
             {children}
@@ -195,6 +227,9 @@ export const HistQuestionStandardProvider = ({ children }) => {
     const colorAlert = 'rgba(63, 45, 28, 1)';
     const endCategory = "HISTORIA";
     const linker3 = buttonhist_cliker_ikon;
+    const dndwrapper = 'dndwrapper histBackGround';
+    const textAndNumberText = 'textAndNumber__text histChooseCat__chooseText';
+    const textAndNumberNumber = 'textAndNumber__number histLink__btn';
     return (
         <QuestionsContext.Provider
             value={{
@@ -210,7 +245,10 @@ export const HistQuestionStandardProvider = ({ children }) => {
                 linkQuest,
                 colorAlert,
                 endCategory,
-                linker3
+                linker3,
+                dndwrapper,
+                textAndNumberText,
+                textAndNumberNumber
             }}
         >
             {children}
@@ -231,6 +269,9 @@ export const MotoQuestionStandardProvider = ({ children }) => {
     const colorAlert = 'rgba(0,0,123)';
     const endCategory = "MOTORYZACJA";
     const linker3 = buttonmoto_cliker_ikon;
+    const dndwrapper = 'dndwrapper motoBackGround';
+    const textAndNumberText = 'textAndNumber__text motoChooseCat__chooseText';
+    const textAndNumberNumber = 'textAndNumber__number motoLink__btn';
     return (
         <QuestionsContext.Provider
             value={{
@@ -246,7 +287,10 @@ export const MotoQuestionStandardProvider = ({ children }) => {
                 linkQuest,
                 colorAlert,
                 endCategory,
-                linker3
+                linker3,
+                dndwrapper,
+                textAndNumberText,
+                textAndNumberNumber
             }}
         >
             {children}
@@ -267,6 +311,9 @@ export const TechQuestionStandardProvider = ({ children }) => {
     const colorAlert = 'rgba(0,0,123)';
     const endCategory = "TECHNOLOGIA";
     const linker3 = button_strzałka_plus;
+    const dndwrapper = 'dndwrapper techBackGround';
+    const textAndNumberText = 'textAndNumber__text techChooseCat__chooseText';
+    const textAndNumberNumber = 'textAndNumber__number techLink__btn';
     return (
         <QuestionsContext.Provider
             value={{
@@ -282,7 +329,10 @@ export const TechQuestionStandardProvider = ({ children }) => {
                 linkQuest,
                 colorAlert,
                 endCategory,
-                linker3
+                linker3,
+                dndwrapper,
+                textAndNumberText,
+                textAndNumberNumber
             }}
         >
             {children}
