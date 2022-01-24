@@ -19,7 +19,10 @@ const Draganddropquest = () => {
     dropableClassRight,
     dndwrapper,
     textAndNumberText,
-    textAndNumberNumber
+    textAndNumberNumber,
+    dndBtn,
+    colBtn,
+    colBtnRight
   } = useContext(QuestionsContext);
   const { linkAdres } = useContext(FirstPage);
   const width = window.innerWidth;
@@ -123,20 +126,20 @@ const Draganddropquest = () => {
           >
             {Object.entries(columns).map(([columnId, column], index) => {
               return column.name === "right answer" ? (
-                <RightColumn key={columnId} {...{ columnId, column, score, setScore, colorAlert }} />
+                <RightColumn key={columnId} {...{ columnId, column, score, setScore, colorAlert, colBtnRight }} />
               ) : (
-                <LeftColumn key={columnId} {...{ columnId, column, score, setScore, colorAlert }} />
+                <LeftColumn key={columnId} {...{ columnId, column, score, setScore, colorAlert, colBtn }} />
               );;
             })}
           </DragDropContext>
         </div>
-        <div className="dnd__btn">
+        <div className="wrapperbtn">
           {count === Object.keys(dataCode2).length - 1 ? (
             <Link to={linkCodeEndDragnDrop}>
-              <button >Finish</button>
+              <button className={dndBtn}>Finish</button>
             </Link>
           ) : (
-            <button onClick={() => { nextQuestion(); }}>Check</button>
+            <button className={dndBtn} onClick={() => { nextQuestion(); }}>Check</button>
           )}
         </div>
       </div>

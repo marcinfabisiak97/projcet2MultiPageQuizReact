@@ -1,5 +1,4 @@
 .endScreen {
-  background-image: url("../../../../assets/quiz_aplikacja_technologiatlo.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -33,44 +32,37 @@
     justify-content: center;
     align-items: center;
     margin: 0;
-
-    p:first-child {
-      font-size: 1rem;
-      width: 35%;
-      display: flex;
-      justify-content: center;
-      margin: 0;
-      padding: 3%;
-      @include techBackgroundColor;
-    }
-    p:last-child {
-      @include numberQuest;
-      @include techBackgroundColorSecond;
-      margin: 0 40% 0 0;
-      padding: 0;
-    }
   }
-  &__btnRestart {
+  &__scoreText {
+    font-size: 1rem;
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 3%;
+  }
+  &__scoreNumber {
+    @include numberQuest;
+    margin: 0 40% 0 0;
+    padding: 0;
+  }
+  &__btn {
     display: flex;
     justify-content: center;
     margin-top: 5%;
     a {
       text-decoration: none;
     }
-
-    div {
-      @include button;
-      @include techBackgroundColorSecond;
-      @include colorChanger;
-      img {
-        width: 30%;
-      }
-      p {
-      }
+  }
+  &__btnRestart {
+    @include button;
+    @include colorChanger;
+    img {
+      width: 30%;
     }
-    div:hover {
-      @include colorChangerHover;
-    }
+  }
+  &__btnRestart:hover {
+    @include colorChangerHover;
   }
 }
 .lastColumn {
@@ -99,7 +91,6 @@
   padding: 30px;
   margin: 10px;
   border-radius: 30px;
-  @include techBackgroundColorSecond;
   box-shadow: 2px 2px 5px #8f6cd1;
   @include colorChanger;
   &__image {

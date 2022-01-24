@@ -170,6 +170,14 @@ export const QuestionsContext = createContext({
     dndwrapper: 'dndwrapper codeBackGround',
     textAndNumberText: 'textAndNumber__text codeChooseCat__chooseText',
     textAndNumberNumber: 'textAndNumber__number techLink__btn',
+    dndBtn: 'wrapperbtn__btn techLink__btn',
+    colBtn: 'leftColumn__dragable techLink__btn',
+    colBtnRight: 'rightColumn__dragable techLink__btn',
+    endScreen: 'endScreen codeBackGround',
+    middleColumnScoreText: 'middleColumn__scoreText codeChooseCat__chooseText',
+    middleColumnScoreNumber: 'middleColumn__scoreNumber techLink__btn',
+    middleColumnBtnRestart: 'middleColumn__btnRestart techLink__btn',
+    endscreenbrick: 'brick techLink__btn',
 });
 export const CultQuestionStandardProvider = ({ children }) => {
     const photo1 = kultura_ikona;
@@ -188,6 +196,14 @@ export const CultQuestionStandardProvider = ({ children }) => {
     const dndwrapper = 'dndwrapper cultBackGround';
     const textAndNumberText = 'textAndNumber__text cultChooseCat__chooseText';
     const textAndNumberNumber = 'textAndNumber__number cultLink__btn';
+    const dndBtn = 'wrapperbtn__btn cultLink__btn';
+    const colBtn = 'leftColumn__dragable cultLink__btn';
+    const colBtnRight = 'rightColumn__dragable cultLink__btn';
+    const endScreen = 'endScreen cultBackGround';
+    const middleColumnScoreText = 'middleColumn__scoreText cultChooseCat__chooseText';
+    const middleColumnScoreNumber = 'middleColumn__scoreNumber cultLink__btn';
+    const middleColumnBtnRestart = 'middleColumn__btnRestart cultLink__btn';
+    const endscreenbrick = 'brick cultLink__btn';
     return (
         <QuestionsContext.Provider
             value={{
@@ -206,7 +222,15 @@ export const CultQuestionStandardProvider = ({ children }) => {
                 linker3,
                 dndwrapper,
                 textAndNumberText,
-                textAndNumberNumber
+                textAndNumberNumber,
+                dndBtn,
+                colBtn,
+                colBtnRight,
+                endScreen,
+                middleColumnScoreText,
+                middleColumnScoreNumber,
+                middleColumnBtnRestart,
+                endscreenbrick
             }}
         >
             {children}
@@ -230,6 +254,14 @@ export const HistQuestionStandardProvider = ({ children }) => {
     const dndwrapper = 'dndwrapper histBackGround';
     const textAndNumberText = 'textAndNumber__text histChooseCat__chooseText';
     const textAndNumberNumber = 'textAndNumber__number histLink__btn';
+    const dndBtn = 'wrapperbtn__btn histLink__btn';
+    const colBtn = 'leftColumn__dragable histLink__btn';
+    const colBtnRight = 'rightColumn__dragable histLink__btn';
+    const endScreen = 'endScreen histBackGround';
+    const middleColumnScoreText = 'middleColumn__scoreText histChooseCat__chooseText';
+    const middleColumnScoreNumber = 'middleColumn__scoreNumber histLink__btn';
+    const middleColumnBtnRestart = 'middleColumn__btnRestart histLink__btn';
+    const endscreenbrick = 'brick histLink__btn';
     return (
         <QuestionsContext.Provider
             value={{
@@ -248,7 +280,15 @@ export const HistQuestionStandardProvider = ({ children }) => {
                 linker3,
                 dndwrapper,
                 textAndNumberText,
-                textAndNumberNumber
+                textAndNumberNumber,
+                dndBtn,
+                colBtn,
+                colBtnRight,
+                endScreen,
+                middleColumnScoreText,
+                middleColumnScoreNumber,
+                middleColumnBtnRestart,
+                endscreenbrick
             }}
         >
             {children}
@@ -272,6 +312,14 @@ export const MotoQuestionStandardProvider = ({ children }) => {
     const dndwrapper = 'dndwrapper motoBackGround';
     const textAndNumberText = 'textAndNumber__text motoChooseCat__chooseText';
     const textAndNumberNumber = 'textAndNumber__number motoLink__btn';
+    const dndBtn = 'wrapperbtn__btn motoLink__btn';
+    const colBtn = 'leftColumn__dragable motoLink__btn';
+    const colBtnRight = 'rightColumn__dragable motoLink__btn';
+    const endScreen = 'endScreen motoBackGround';
+    const middleColumnScoreText = 'middleColumn__scoreText motoChooseCat__chooseText';
+    const middleColumnScoreNumber = 'middleColumn__scoreNumber motoLink__btn';
+    const middleColumnBtnRestart = 'middleColumn__btnRestart motoLink__btn';
+    const endscreenbrick = 'brick motoLink__btn';
     return (
         <QuestionsContext.Provider
             value={{
@@ -290,7 +338,15 @@ export const MotoQuestionStandardProvider = ({ children }) => {
                 linker3,
                 dndwrapper,
                 textAndNumberText,
-                textAndNumberNumber
+                textAndNumberNumber,
+                dndBtn,
+                colBtn,
+                colBtnRight,
+                endScreen,
+                middleColumnScoreText,
+                middleColumnScoreNumber,
+                middleColumnBtnRestart,
+                endscreenbrick
             }}
         >
             {children}
@@ -314,6 +370,14 @@ export const TechQuestionStandardProvider = ({ children }) => {
     const dndwrapper = 'dndwrapper techBackGround';
     const textAndNumberText = 'textAndNumber__text techChooseCat__chooseText';
     const textAndNumberNumber = 'textAndNumber__number techLink__btn';
+    const dndBtn = 'wrapperbtn__btn techLink__btn';
+    const colBtn = 'leftColumn__dragable techLink__btn';
+    const colBtnRight = 'rightColumn__dragable techLink__btn';
+    const endScreen = 'endScreen techBackGround';
+    const middleColumnScoreText = 'middleColumn__scoreText techChooseCat__chooseText';
+    const middleColumnScoreNumber = 'middleColumn__scoreNumber techLink__btn';
+    const middleColumnBtnRestart = 'middleColumn__btnRestart techLink__btn';
+    const endscreenbrick = 'brick techLink__btn';
     return (
         <QuestionsContext.Provider
             value={{
@@ -332,7 +396,15 @@ export const TechQuestionStandardProvider = ({ children }) => {
                 linker3,
                 dndwrapper,
                 textAndNumberText,
-                textAndNumberNumber
+                textAndNumberNumber,
+                dndBtn,
+                colBtn,
+                colBtnRight,
+                endScreen,
+                middleColumnScoreText,
+                middleColumnScoreNumber,
+                middleColumnBtnRestart,
+                endscreenbrick
             }}
         >
             {children}

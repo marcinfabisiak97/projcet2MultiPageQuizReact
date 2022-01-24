@@ -1,7 +1,7 @@
 import React from "react";
 import { Draggable, Droppable } from "react-beautiful-dnd";
 
-const RightColumn = ({ columnId, column, score, setScore, colorAlert }) => {
+const RightColumn = ({ columnId, column, score, setScore, colorAlert, colBtnRight }) => {
 
   return (
     <div className="rightColumn">
@@ -29,7 +29,7 @@ const RightColumn = ({ columnId, column, score, setScore, colorAlert }) => {
                           ref={provided.innerRef}
                           {...provided.draggableProps}
                           {...provided.dragHandleProps}
-                          className="rightColumn__dragable"
+                          className={colBtnRight}
                           style={{
 
                             ...provided.draggableProps.style,

@@ -15,7 +15,7 @@ const EndScreen = () => {
     const breakpoint = 1023;
     const width = window.innerWidth;
     const { score, setScore } = useContext(QuizContext);
-    const { photo1, desc1, endClas, dataCode2, linkQuest, endCategory, linkCode, linker3, linkAdr } = useContext(QuestionsContext);
+    const { photo1, desc1, endClas, dataCode2, linkQuest, endCategory, linkCode, linker3, linkAdr, endScreen, middleColumnScoreText, middleColumnScoreNumber, middleColumnBtnRestart, endscreenbrick } = useContext(QuestionsContext);
     const restartQuiz = () => {
         setScore(0)
         localStorage.clear()
@@ -31,7 +31,7 @@ const EndScreen = () => {
 
     const categoryShortcut = myLists.filter(el => el.text.slice() !== endCategory).map((el, index) => {
         return (
-            <div className="brick">
+            <div className={endscreenbrick}>
                 <Link to={el.content}  >
                     <div className="brick__image">
                         <img src={el.pic} alt="category" />
@@ -45,7 +45,7 @@ const EndScreen = () => {
     })
 
     return (
-        <div className="endScreen">
+        <div className={endScreen}>
             <div className="endScreen__letter" >
                 <img src={q} alt="Q" />
             </div>
@@ -56,14 +56,13 @@ const EndScreen = () => {
                 </div>
                 <div className="middleColumn__line"></div>
                 <p>{endCategory}</p>
-                <div className="middleColumn__score
-                ">
-                    <p>TWÓJ WYNIK</p>
-                    <p> {score} / {Object.keys(dataCode2).length}</p>
+                <div className="middleColumn__score">
+                    <p className={middleColumnScoreText}>TWÓJ WYNIK</p>
+                    <p className={middleColumnScoreNumber}> {score} / {Object.keys(dataCode2).length}</p>
                 </div>
-                <div className="middleColumn__btnRestart">
+                <div className="middleColumn__btn">
                     <Link to={width < breakpoint ? linkAdr : linkQuest} >
-                        <div onClick={restartQuiz}>
+                        <div className={middleColumnBtnRestart} onClick={restartQuiz}>
                             <p>POWTÓRZ QUIZ</p>
                             <img src={linker3} alt="button" />
                         </div>

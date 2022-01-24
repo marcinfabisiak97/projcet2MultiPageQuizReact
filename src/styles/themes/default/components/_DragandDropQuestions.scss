@@ -33,17 +33,16 @@
   &__question {
     display: flex;
   }
+}
+.wrapperbtn {
   &__btn {
-    button {
-      color: white;
-      padding: 20px 60px;
-      margin: 5%;
-      border-radius: 15px;
-      @include techBackgroundColorSecond;
-      @include colorChanger;
-    }
-    button:hover {
-      @include colorChangerHover;
-    }
+    color: white;
+    padding: 20px 60px;
+    margin: 5%;
+    border-radius: 15px;
+    @include colorChanger;
+  }
+  &__btn:hover {
+    @include colorChangerHover;
   }
 }
