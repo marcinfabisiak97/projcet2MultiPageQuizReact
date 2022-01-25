@@ -71,7 +71,7 @@
 @media only screen and (max-width: 1441px) {
   .brickText {
     p {
-      font-size: 0.5rem;
+      font-size: 0.7rem;
     }
   }
 }
@@ -85,7 +85,17 @@
 
   .brickText {
     p {
-      font-size: 0.4rem;
+      font-size: 0.6rem;
+    }
+  }
+}
+@media only screen and (max-width: 426px) {
+  .mainPage {
+    height: 140vh;
+  }
+  .brickText {
+    p {
+      font-size: 0.5rem;
     }
   }
 }

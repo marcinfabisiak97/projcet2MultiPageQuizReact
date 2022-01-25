@@ -19,12 +19,13 @@ function App() {
     <Suspense fallback={<Loader
       type="Circles"
       color="#00BFFF"
-      height={800}
-      width={800}
+      height={200}
+      width={200}
       timeout={3000} //3 secs
-      style={{ textAlign: 'center', verticalAlign: 'center' }}
+      style={{ textAlign: 'center', marginTop: '25%' }}
+
     />}>
-      <Router>
+      < Router >
         <Switch>
 
           <QuizContext.Provider value={{ gameState, setGameState, score, setScore }}>
@@ -70,8 +71,8 @@ function App() {
           </QuizContext.Provider >
         </Switch>
 
-      </Router>
-    </Suspense>
+      </Router >
+    </Suspense >
   );
 }
 

@@ -178,7 +178,7 @@ export const QuestionsContext = createContext({
     middleColumnScoreNumber: 'middleColumn__scoreNumber techLink__btn',
     middleColumnBtnRestart: 'middleColumn__btnRestart techLink__btn',
     endscreenbrick: 'brick techLink__btn',
-    wrapperstadardquest: 'techBackGround',
+    wrapperstadardquest: 'wrapperStandard techBackGround',
     answersBtn: 'answers__btn techLink__btn',
 });
 export const CultQuestionStandardProvider = ({ children }) => {
