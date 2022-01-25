@@ -43,3 +43,26 @@
     border-radius: 8px;
   }
 }
+@media only screen and (max-width: 1026px) {
+  .leftColumn {
+    h2 {
+      font-size: 0.8rem;
+    }
+    &__dragable {
+      min-width: 200px;
+      margin: 10px;
+      padding: 16px;
+      min-height: 40px;
+      border-radius: 8px;
+      font-size: 0.8rem;
+    }
+  }
+  .rightColumn {
+    h2 {
+      font-size: 0.8rem;
+    }
+    &__dropable {
+      min-width: 230px;
+    }
+  }
+}

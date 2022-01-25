@@ -20,3 +20,48 @@ body {
 .histBackGround {
   background-image: url("../assets/quiz_aplikacja_historia.jpg");
 }
+.techLink {
+  &__btn {
+    @include techBackgroundColorSecond;
+  }
+}
+.cultLink {
+  &__btn {
+    @include cultBackgroundColorSecond;
+  }
+}
+.motoLink {
+  &__btn {
+    @include motoBackgroundColorSecond;
+  }
+}
+.histLink {
+  &__btn {
+    @include histBackgroundColorSecond;
+  }
+}
+.techChooseCat {
+  &__chooseText {
+    @include techBackgroundColor;
+  }
+}
+.cultChooseCat {
+  &__chooseText {
+    @include cultBackgroundColor;
+  }
+}
+.motoChooseCat {
+  &__chooseText {
+    @include motoBackgroundColor;
+  }
+}
+.codeChooseCat {
+  &__chooseText {
+    @include codeBackgroundColor;
+  }
+}
+.histChooseCat {
+  &__chooseText {
+    @include histBackgroundColor;
+  }
+}

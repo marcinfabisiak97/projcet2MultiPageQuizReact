@@ -28,51 +28,7 @@
     @include colorChangerHover;
   }
 }
-.techLink {
-  &__btn {
-    @include techBackgroundColorSecond;
-  }
-}
-.cultLink {
-  &__btn {
-    @include cultBackgroundColorSecond;
-  }
-}
-.motoLink {
-  &__btn {
-    @include motoBackgroundColorSecond;
-  }
-}
-.histLink {
-  &__btn {
-    @include histBackgroundColorSecond;
-  }
-}
-.techChooseCat {
-  &__chooseText {
-    @include techBackgroundColor;
-  }
-}
-.cultChooseCat {
-  &__chooseText {
-    @include cultBackgroundColor;
-  }
-}
-.motoChooseCat {
-  &__chooseText {
-    @include motoBackgroundColor;
-  }
-}
-.codeChooseCat {
-  &__chooseText {
-    @include codeBackgroundColor;
-  }
-}
-.histChooseCat {
-  &__chooseText {
-    @include histBackgroundColor;
-  }
-}
+
 .imgnText {
   &__img {
     margin-top: 10%;
@@ -88,5 +44,15 @@
   }
   &__text {
     margin-top: 1%;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  .chooseCat {
+    margin: 1%;
+    &__chooseText {
+      min-width: 310px;
+      min-height: 70px;
+    }
   }
 }

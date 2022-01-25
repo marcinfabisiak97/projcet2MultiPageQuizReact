@@ -1,0 +1,62 @@
+@media only screen and (max-width: 769px) {
+  .wrapperStandard {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: white;
+    h3 {
+      display: flex;
+      justify-content: center;
+      font-size: 0.8rem;
+    }
+  }
+  .textAndNumber {
+    &__text {
+      min-width: 400px;
+    }
+  }
+  .answers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 90vw;
+    margin: 0 auto;
+    padding: 4px;
+    border-radius: 8px;
+    min-height: 80px;
+    &__btn {
+      min-width: 200px;
+      margin: 10px;
+      padding: 16px;
+      min-height: 40px;
+      border-radius: 8px;
+      color: white;
+      font-size: 0.8rem;
+      img {
+        width: 15%;
+      }
+    }
+  }
+  .wrapperbtn {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 426px) {
+  .wrapperStandard {
+    height: 110vh;
+  }
+
+  .textAndNumber {
+    &__text {
+      min-width: 100px;
+      text-align: center;
+      font-size: 0.8rem;
+    }
+    &__number {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}

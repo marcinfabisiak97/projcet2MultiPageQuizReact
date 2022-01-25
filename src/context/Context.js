@@ -178,6 +178,8 @@ export const QuestionsContext = createContext({
     middleColumnScoreNumber: 'middleColumn__scoreNumber techLink__btn',
     middleColumnBtnRestart: 'middleColumn__btnRestart techLink__btn',
     endscreenbrick: 'brick techLink__btn',
+    wrapperstadardquest: 'techBackGround',
+    answersBtn: 'answers__btn techLink__btn',
 });
 export const CultQuestionStandardProvider = ({ children }) => {
     const photo1 = kultura_ikona;
@@ -204,6 +206,8 @@ export const CultQuestionStandardProvider = ({ children }) => {
     const middleColumnScoreNumber = 'middleColumn__scoreNumber cultLink__btn';
     const middleColumnBtnRestart = 'middleColumn__btnRestart cultLink__btn';
     const endscreenbrick = 'brick cultLink__btn';
+    const wrapperstadardquest = 'wrapperStandard cultBackGround';
+    const answersBtn = 'answers__btn cultLink__btn';
     return (
         <QuestionsContext.Provider
             value={{
@@ -230,7 +234,9 @@ export const CultQuestionStandardProvider = ({ children }) => {
                 middleColumnScoreText,
                 middleColumnScoreNumber,
                 middleColumnBtnRestart,
-                endscreenbrick
+                endscreenbrick,
+                wrapperstadardquest,
+                answersBtn
             }}
         >
             {children}
@@ -262,6 +268,8 @@ export const HistQuestionStandardProvider = ({ children }) => {
     const middleColumnScoreNumber = 'middleColumn__scoreNumber histLink__btn';
     const middleColumnBtnRestart = 'middleColumn__btnRestart histLink__btn';
     const endscreenbrick = 'brick histLink__btn';
+    const wrapperstadardquest = 'wrapperStandard histBackGround';
+    const answersBtn = 'answers__btn histLink__btn';
     return (
         <QuestionsContext.Provider
             value={{
@@ -288,7 +296,9 @@ export const HistQuestionStandardProvider = ({ children }) => {
                 middleColumnScoreText,
                 middleColumnScoreNumber,
                 middleColumnBtnRestart,
-                endscreenbrick
+                endscreenbrick,
+                wrapperstadardquest,
+                answersBtn
             }}
         >
             {children}
@@ -320,6 +330,8 @@ export const MotoQuestionStandardProvider = ({ children }) => {
     const middleColumnScoreNumber = 'middleColumn__scoreNumber motoLink__btn';
     const middleColumnBtnRestart = 'middleColumn__btnRestart motoLink__btn';
     const endscreenbrick = 'brick motoLink__btn';
+    const wrapperstadardquest = 'wrapperStandard histBackGround';
+    const answersBtn = 'answers__btn motoLink__btn';
     return (
         <QuestionsContext.Provider
             value={{
@@ -346,7 +358,9 @@ export const MotoQuestionStandardProvider = ({ children }) => {
                 middleColumnScoreText,
                 middleColumnScoreNumber,
                 middleColumnBtnRestart,
-                endscreenbrick
+                endscreenbrick,
+                wrapperstadardquest,
+                answersBtn
             }}
         >
             {children}
@@ -378,6 +392,8 @@ export const TechQuestionStandardProvider = ({ children }) => {
     const middleColumnScoreNumber = 'middleColumn__scoreNumber techLink__btn';
     const middleColumnBtnRestart = 'middleColumn__btnRestart techLink__btn';
     const endscreenbrick = 'brick techLink__btn';
+    const wrapperstadardquest = 'wrapperStandard techBackGround';
+    const answersBtn = 'answers__btn techLink__btn';
     return (
         <QuestionsContext.Provider
             value={{
@@ -404,7 +420,9 @@ export const TechQuestionStandardProvider = ({ children }) => {
                 middleColumnScoreText,
                 middleColumnScoreNumber,
                 middleColumnBtnRestart,
-                endscreenbrick
+                endscreenbrick,
+                wrapperstadardquest,
+                answersBtn
             }}
         >
             {children}

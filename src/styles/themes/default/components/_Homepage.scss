@@ -33,10 +33,10 @@
   justify-content: center;
   margin: 5%;
   &__brick {
-    min-width: 15%;
+    min-width: 10%;
     margin: 2%;
     padding: 1% 1% 0 1%;
-    border-radius: 15px;
+    border-radius: 30px;
     box-shadow: 2px 2px 5px #8f6cd1;
     background-image: linear-gradient(
       to top right,
@@ -49,21 +49,53 @@
     a {
       text-decoration: none;
     }
-    .brickImg {
-      border-bottom: 2px solid purple;
-      margin: 10%;
-      padding-bottom: 10%;
-      img {
-        max-width: 50%;
-      }
-    }
-    .brickText {
-      p {
-        color: white;
-      }
-    }
   }
   &__brick:hover {
     background-position: right;
+  }
+}
+.brickImg {
+  border-bottom: 2px solid purple;
+  margin: 10%;
+  padding-bottom: 10%;
+  img {
+    max-width: 50%;
+  }
+}
+.brickText {
+  p {
+    color: white;
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 1441px) {
+  .brickText {
+    p {
+      font-size: 0.7rem;
+    }
+  }
+}
+@media only screen and (max-width: 1025px) {
+  .mainPage {
+    height: 130vh;
+  }
+  .fiveBricks {
+    flex-wrap: wrap;
+  }
+
+  .brickText {
+    p {
+      font-size: 0.5rem;
+    }
+  }
+}
+@media only screen and (max-width: 376px) {
+  .mainPage {
+    height: 190vh;
+  }
+  .brickText {
+    p {
+      font-size: 0.5rem;
+    }
   }
 }

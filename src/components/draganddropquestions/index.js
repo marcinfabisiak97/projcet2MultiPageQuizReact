@@ -25,18 +25,26 @@ const Draganddropquest = () => {
     colBtnRight
   } = useContext(QuestionsContext);
   const { linkAdres } = useContext(FirstPage);
-  const width = window.innerWidth;
-  const breakpoint = 1023;
   const [count, setCount] = useState(0);
   const [columns, setColumns] = useState(
     dataCode2[Object.keys(dataCode2)[count]]
   );
   const history = useHistory();
+  const [dimensions, setDimensions] = useState({
+    width: window.innerWidth
+  })
   useEffect(() => {
-    if (width < breakpoint) {
+    const handleResize = () => {
+      setDimensions({
+        width: window.innerWidth
+      })
+    }
+    window.addEventListener('resize', handleResize)
+    if (window.innerWidth < 1023) {
       history.push(linkAdres);
     }
-  }, [width])
+  })
+
   const usePreviousValue = value => {
     const ref = useRef();
     useEffect(() => {
