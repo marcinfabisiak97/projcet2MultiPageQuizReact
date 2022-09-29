@@ -15,24 +15,19 @@ function App() {
   const [gameState, setGameState] = useState("homepage");
   const [score, setScore] = useState(0);
   return (
-
     <Suspense fallback={<Loader
       type="Circles"
       color="#00BFFF"
       height={200}
       width={200}
       timeout={3000} //3 secs
-      style={{ textAlign: 'center', marginTop: '25%' }}
-
+      style={{ textAlign: 'center', paddingTop: '20%' }}
     />}>
       < Router >
         <Switch>
-
           <QuizContext.Provider value={{ gameState, setGameState, score, setScore }}>
-
             <Route exact path='/' component={Homepage} />
             <Route exact path='/Firstpagecode' component={Firstpage} />
-
             <CultPageProvider>
               <Route exact path='/Firstpagecult' component={Firstpage} />
             </CultPageProvider>
@@ -70,7 +65,6 @@ function App() {
             <Route exact path='/EndScreenDragandDropCode' component={EndScreen} />
           </QuizContext.Provider >
         </Switch>
-
       </Router >
     </Suspense >
   );
