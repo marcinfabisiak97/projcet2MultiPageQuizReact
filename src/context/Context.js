@@ -32,7 +32,7 @@ export const DataContext = createContext({
 export const FirstPage = createContext({
     photo: programowanie_ikona,
     desc: "codding photo",
-    category: "PROGRAMOWANIE",
+    category: "PROGRAMMING",
     linkAdres: "/Standardquestionscode",
     linkAdres1: "/Codedraganddropcode",
     linker2: button_strzałka_plus,
@@ -44,7 +44,7 @@ export const FirstPage = createContext({
 export const CultPageProvider = ({ children }) => {
     const photo = kultura_ikona;
     const desc = "culture photo";
-    const category = "KULTURA";
+    const category = "CULTURE";
     const linkAdres = "/Standardquestionscult";
     const linkAdres1 = "/Codedraganddropcult";
     const linker2 = buttoncult_cliker_ikon;
@@ -72,7 +72,7 @@ export const CultPageProvider = ({ children }) => {
 export const HistPageProvider = ({ children }) => {
     const photo = historia_ikona;
     const desc = "history picture";
-    const category = "HISTORIA";
+    const category = "HISTORY";
     const linkAdres = "/Standardquestionshist";
     const linkAdres1 = "/Codedraganddrophist";
     const linker2 = buttonhist_cliker_ikon;
@@ -100,7 +100,7 @@ export const HistPageProvider = ({ children }) => {
 export const MotoPageProvider = ({ children }) => {
     const photo = motoryzacja_ikona;
     const desc = "moto ikon";
-    const category = "MOTORYZACJA";
+    const category = "AUTOMOTIVE";
     const linkAdres = "/Standardquestionsmoto";
     const linkAdres1 = "/Codedraganddropmoto";
     const linker2 = buttonmoto_cliker_ikon;
@@ -165,7 +165,7 @@ export const QuestionsContext = createContext({
     dataCode2: columnsFromBackendCode,
     linkQuest: '/Codedraganddropcode',
     colorAlert: 'rgba(0,0,123)',
-    endCategory: "PROGRAMOWANIE",
+    endCategory: "PROGRAMMING",
     linker3: button_strzałka_plus,
     dndwrapper: 'dndwrapper codeBackGround',
     textAndNumberText: 'textAndNumber__text codeChooseCat__chooseText',
@@ -193,7 +193,7 @@ export const CultQuestionStandardProvider = ({ children }) => {
     const dataCode2 = columnsFromBackendCult;
     const linkQuest = '/Codedraganddropcult';
     const colorAlert = 'rgba(104, 92, 136, 1)';
-    const endCategory = "KULTURA";
+    const endCategory = "CULTURE";
     const linker3 = buttoncult_cliker_ikon;
     const dndwrapper = 'dndwrapper cultBackGround';
     const textAndNumberText = 'textAndNumber__text cultChooseCat__chooseText';
@@ -255,7 +255,7 @@ export const HistQuestionStandardProvider = ({ children }) => {
     const dataCode2 = columnsFromBackendHist;
     const linkQuest = '/Codedraganddrophist';
     const colorAlert = 'rgba(63, 45, 28, 1)';
-    const endCategory = "HISTORIA";
+    const endCategory = "HISTORY";
     const linker3 = buttonhist_cliker_ikon;
     const dndwrapper = 'dndwrapper histBackGround';
     const textAndNumberText = 'textAndNumber__text histChooseCat__chooseText';
@@ -317,7 +317,7 @@ export const MotoQuestionStandardProvider = ({ children }) => {
     const dataCode2 = columnsFromBackendMoto;
     const linkQuest = '/Codedraganddropmoto';
     const colorAlert = 'rgba(0,0,123)';
-    const endCategory = "MOTORYZACJA";
+    const endCategory = "AUTOMOTIVE";
     const linker3 = buttonmoto_cliker_ikon;
     const dndwrapper = 'dndwrapper motoBackGround';
     const textAndNumberText = 'textAndNumber__text motoChooseCat__chooseText';

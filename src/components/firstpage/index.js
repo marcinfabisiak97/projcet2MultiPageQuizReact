@@ -18,7 +18,7 @@ const Firstpage = () => {
 			<Headerfirstpage />
 			<div className='chooseCat'>
 				<div className={chooseCategory} >
-					<p>WYBRANA KATEGORIA:</p>
+					<p>SELECTED CATEGORY:</p>
 				</div>
 				<div className='imgnText' >
 					<div className='imgnText__img' >
@@ -32,7 +32,7 @@ const Firstpage = () => {
 			</div>
 			<Link to={width < breakpoint ? linkAdres : linkAdres1} className={clicker} className="link" >
 				<div className={linkButton} onClick={restartQuiz}>
-					<p>Rozpocznij</p><img src={linker2} alt="button" />
+					<p>Start</p><img src={linker2} alt="button" />
 				</div>
 			</Link>
 		</div>

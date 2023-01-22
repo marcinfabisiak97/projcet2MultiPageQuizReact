@@ -10,11 +10,11 @@ import React from "react";
 const Homepage = () => {
 
 	const myLists = [
-		{ text: 'TECHNOLOGIA', content: '/Firstpagetech', pic: technologia_ikona_ },
-		{ text: 'KULTURA', content: '/Firstpagecult', pic: kultura_ikona },
-		{ text: 'MOTORYZACJA', content: '/Firstpagemoto', pic: motoryzacja_ikona },
-		{ text: 'PROGRAMOWANIE', content: '/Firstpagecode', pic: programowanie_ikona },
-		{ text: 'HISTORIA', content: '/Firstpagehist', pic: historia_ikona },
+		{ text: 'TECHNOLOGY', content: '/Firstpagetech', pic: technologia_ikona_ },
+		{ text: 'CULTURE', content: '/Firstpagecult', pic: kultura_ikona },
+		{ text: 'AUTOMOTIVE', content: '/Firstpagemoto', pic: motoryzacja_ikona },
+		{ text: 'PROGRAMMING', content: '/Firstpagecode', pic: programowanie_ikona },
+		{ text: 'HISTORY', content: '/Firstpagehist', pic: historia_ikona },
 	];
 
 	const Category = myLists.map((el, index) => {
@@ -36,8 +36,8 @@ const Homepage = () => {
 	return (
 		<div className="mainPage" >
 			<h1>QUIZ</h1>
-			<h2>10 PYTAŃ/5 KATEGORII</h2>
-			<h3>WYBIERZ KATEGORIE</h3>
+			<h2>10 Questions/5 Categories</h2>
+			<h3>Choose Category</h3>
 			<div className="fiveBricks" >
 				{Category}
 			</div>

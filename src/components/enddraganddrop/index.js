@@ -23,10 +23,10 @@ const EndScreen = () => {
     const myLists = [
 
         { text: 'TECHNOLOGIA', content: '/Firstpagetech', pic: technologia_ikona_ },
-        { text: 'KULTURA', content: '/Firstpagecult', pic: kultura_ikona },
-        { text: 'MOTORYZACJA', content: '/Firstpagemoto', pic: motoryzacja_ikona },
-        { text: 'PROGRAMOWANIE', content: '/Firstpagecode', pic: programowanie_ikona },
-        { text: 'HISTORIA', content: '/Firstpagehist', pic: historia_ikona },
+        { text: 'CULTURE', content: '/Firstpagecult', pic: kultura_ikona },
+        { text: 'AUTOMOTIVE', content: '/Firstpagemoto', pic: motoryzacja_ikona },
+        { text: 'PROGRAMMING', content: '/Firstpagecode', pic: programowanie_ikona },
+        { text: 'HISTORY', content: '/Firstpagehist', pic: historia_ikona },
     ];
 
     const categoryShortcut = myLists.filter(el => el.text.slice() !== endCategory).map((el, index) => {
@@ -57,13 +57,13 @@ const EndScreen = () => {
                 <div className="middleColumn__line"></div>
                 <p>{endCategory}</p>
                 <div className="middleColumn__score">
-                    <p className={middleColumnScoreText}>TWÓJ WYNIK</p>
+                    <p className={middleColumnScoreText}>YOUR RESULT</p>
                     <p className={middleColumnScoreNumber}> {score} / {Object.keys(dataCode2).length}</p>
                 </div>
                 <div className="middleColumn__btn">
                     <Link to={width < breakpoint ? linkAdr : linkQuest} >
                         <div className={middleColumnBtnRestart} onClick={restartQuiz}>
-                            <p>POWTÓRZ QUIZ</p>
+                            <p>REPEAT QUIZ</p>
                             <img src={linker3} alt="button" />
                         </div>
                     </Link>
@@ -83,7 +83,7 @@ const EndScreen = () => {
                         </Link>
                     </div>
                 </div >
-                <p className="lastColumn__chooseCat">WYBIERZ KATEGORIE</p>
+                <p className="lastColumn__chooseCat">SELECT CATEGORIES</p>
                 <div className="lastColumn__brikcs">
                     {categoryShortcut}
                 </div>

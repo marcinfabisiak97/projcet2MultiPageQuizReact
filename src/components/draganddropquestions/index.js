@@ -61,7 +61,7 @@ const Draganddropquest = () => {
     setCount(count + 1);
     Swal.fire({
       icon: (score !== prevValue && score !== 0) ? 'success' : 'error',
-      title: (score !== prevValue && score !== 0) ? 'Good answer' : 'Bad answer ',
+      title: (score !== prevValue && score !== 0) ? 'Good answer' : 'Wrong answer',
       showConfirmButton: false,
       background: colorAlert,
       timer: 2000
