@@ -29,9 +29,12 @@ const EndScreen = () => {
         { text: 'HISTORY', content: '/Firstpagehist', pic: historia_ikona },
     ];
 
-    const categoryShortcut = myLists.filter(el => el.text.slice() !== endCategory).map((el, index) => {
+    const categoryShortcut = myLists.filter((el, index) => {
+
+        return (el.text.slice() !== endCategory)
+    }).map((el, index) => {
         return (
-            <div className={endscreenbrick}>
+            <div key={index} className={endscreenbrick}>
                 <Link to={el.content}  >
                     <div className="brick__image">
                         <img src={el.pic} alt="category" />
