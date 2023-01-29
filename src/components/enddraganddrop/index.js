@@ -22,7 +22,7 @@ const EndScreen = () => {
     }
     const myLists = [
 
-        { text: 'TECHNOLOGIA', content: '/Firstpagetech', pic: technologia_ikona_ },
+        { text: 'TECHNOLOGY', content: '/Firstpagetech', pic: technologia_ikona_ },
         { text: 'CULTURE', content: '/Firstpagecult', pic: kultura_ikona },
         { text: 'AUTOMOTIVE', content: '/Firstpagemoto', pic: motoryzacja_ikona },
         { text: 'PROGRAMMING', content: '/Firstpagecode', pic: programowanie_ikona },

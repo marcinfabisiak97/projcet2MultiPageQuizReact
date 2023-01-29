@@ -128,7 +128,7 @@ export const MotoPageProvider = ({ children }) => {
 export const TechPageProvider = ({ children }) => {
     const photo = technologia_ikona_;
     const desc = "tech ikon";
-    const category = "TECHNOLOGIA";
+    const category = "TECHNOLOGY";
     const linkAdres = "/Standardquestionstech";
     const linkAdres1 = "/Codedraganddroptech";
     const linker2 = button_strzałka_plus;
@@ -379,7 +379,7 @@ export const TechQuestionStandardProvider = ({ children }) => {
     const dataCode2 = columnsFromBackend;
     const linkQuest = '/Codedraganddroptech';
     const colorAlert = 'rgba(0,0,123)';
-    const endCategory = "TECHNOLOGIA";
+    const endCategory = "TECHNOLOGY";
     const linker3 = button_strzałka_plus;
     const dndwrapper = 'dndwrapper techBackGround';
     const textAndNumberText = 'textAndNumber__text techChooseCat__chooseText';

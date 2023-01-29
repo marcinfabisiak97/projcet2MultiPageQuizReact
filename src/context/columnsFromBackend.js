@@ -83,29 +83,29 @@ export const columnsFromBackend = {
     },
     p4: {
         q4: {
-            name: "4.Which of these is not a peripheral, in computer terms?",
+            name: "4.Which term identifies a specific computer on the web and the main page of the entire site?",
             items: [{
                 id: uuid(),
-                content: "Keyboard"
+                content: "WWW"
             },
             {
                 id: uuid(),
-                content: "Monitor"
+                content: "Link"
             },
             {
                 id: uuid(),
-                content: "Mouse"
+                content: "SQL"
             },
             {
                 id: uuid(),
-                content: "Motherboard"
+                content: "URL"
             },
             ],
         },
         a2: {
             name: "right answer",
             items: [],
-            answer: "Motherboard",
+            answer: "URL",
         }
     },
     p5: {
